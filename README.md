@@ -1,2 +1,0 @@
-# ReactAssignments
-React learning projects
