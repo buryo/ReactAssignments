@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import ColorPicker from '../jscolor';
 
-import Color from '../App.css';
-import { Header } from './Style';
+import '../App.css';
 
 class ColorApp extends Component {
     state = {
@@ -16,9 +16,11 @@ class ColorApp extends Component {
 
     render() {
         return (
-            <div className={Color.App} style={Header}>
-                {this.state.color && <h1>{this.state.color}</h1>}
+            <div className="Component" >
+                <h1>TODO: Use a modern color picker</h1>
+                {this.state.color && <h1 style={{ color: this.state.color }}>{this.state.color}</h1>}
                 <input type="color" name="favcolor" value={this.state.color} onChange={(e) => this.colorSelected(e)} ></input>
+                <input className="jscolor"></input>
             </div>
         );
     }

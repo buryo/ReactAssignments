@@ -12,10 +12,10 @@ const Navigation = () => {
                     <Link to="/color-app">Kleur Hexa opdracht</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Filtering</Link>
+                    <Link to="/filtering-array">Filtering</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Detect device</Link>
+                    <Link to="/OS-detector">Detect device</Link>
                 </li>
                 <li>
                     <Link to="/contact">Copy URL with button</Link>
