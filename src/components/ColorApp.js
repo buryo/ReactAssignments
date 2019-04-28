@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
-import ColorPicker from '../jscolor';
+import iro from '@jaames/iro';
 
 import '../App.css';
 
+
 class ColorApp extends Component {
-    state = {
-        color: '#ff0000',
-    }
 
-    colorSelected(e) {
-        this.setState({ color: e.target.value });
-    }
+    componentDidMount() {
+        // Create a new color picker instance
+        var colorPicker = new iro.ColorPicker(".colorPicker", {
+            // color picker options
+            // Option guide: https://iro.js.org/guide.html#color-picker-options
+            width: 280,
+            color: "#ffffff",
+            borderWidth: 1,
+            borderColor: "#fff",
+        });
 
+        colorPicker.on(["color:init", "color:change"], function (color) {
+            // Show the current color in different formats
+            // Using the selected color: https://iro.js.org/guide.html#selected-color-api
+            document.getElementById('colorHex').innerHTML = [
+                color.hexString,
+            ];
+        });
+    }
 
 
     render() {
         return (
-            <div className="Component" >
-                <h1>TODO: Use a modern color picker</h1>
-                {this.state.color && <h1 style={{ color: this.state.color }}>{this.state.color}</h1>}
-                <input type="color" name="favcolor" value={this.state.color} onChange={(e) => this.colorSelected(e)} ></input>
-                <input className="jscolor"></input>
+            <div className="Component" style={{ textAlign: "center" }}>
+                <h1 id="colorHex">#ffffff</h1>
+                <div className="colorPicker"></div>
             </div>
         );
     }

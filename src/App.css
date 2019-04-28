@@ -44,3 +44,7 @@ nav li a:hover {
   line-height: 1.2;
   text-align: left;
 }
+
+.iro__colorPicker{
+  margin: auto;
+}
