@@ -15,7 +15,7 @@ const OSDetector = () => {
         "Linux"
     ]
 
-    const UserOSName = OSNames.filter((item, i) => window.navigator.userAgent.indexOf(OSNames[i]) != -1).join();
+    const UserOSName = OSNames.filter((item, i) => window.navigator.userAgent.indexOf(OSNames[i]) !== -1).join();
 
     return (
         <div className="Component">

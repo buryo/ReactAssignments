@@ -48,3 +48,8 @@ nav li a:hover {
 .iro__colorPicker{
   margin: auto;
 }
+
+.swal-modal {
+  padding: 2rem;
+  border: 3px solid white;
+}

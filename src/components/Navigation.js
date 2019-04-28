@@ -15,13 +15,13 @@ const Navigation = () => {
                     <Link to="/filtering-array">Filtering</Link>
                 </li>
                 <li>
-                    <Link to="/OS-detector">Detect device</Link>
+                    <Link to="/os-detector">Detect device</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Copy URL with button</Link>
+                    <Link to="/copy-app">Copy URL with button</Link>
                 </li>
                 <li>
-                    <Link to="/contact">Camelcase to Kebab-Case</Link>
+                    <Link to="/kebab-case">Camelcase to Kebab-Case</Link>
                 </li>
             </ul>
         </nav>

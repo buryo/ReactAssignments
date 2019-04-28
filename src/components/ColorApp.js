@@ -5,6 +5,9 @@ import '../App.css';
 
 
 class ColorApp extends Component {
+    state = {
+
+    }
 
     componentDidMount() {
         // Create a new color picker instance
@@ -22,7 +25,9 @@ class ColorApp extends Component {
             // Using the selected color: https://iro.js.org/guide.html#selected-color-api
             document.getElementById('colorHex').innerHTML = [
                 color.hexString,
+
             ];
+            document.body.style.backgroundColor = color.hexString;
         });
     }
 
@@ -30,7 +35,7 @@ class ColorApp extends Component {
     render() {
         return (
             <div className="Component" style={{ textAlign: "center" }}>
-                <h1 id="colorHex">#ffffff</h1>
+                <h1 id="colorHex"></h1>
                 <div className="colorPicker"></div>
             </div>
         );
