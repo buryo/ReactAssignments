@@ -1,0 +1,9 @@
+nav{
+    justify-content: center;
+    text-align: center;
+}
+
+
+nav ul li{
+    list-style: none;
+}
